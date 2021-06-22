@@ -1,0 +1,11 @@
+{
+    "PORT":8000,
+    "JWT_OPTIONS":{
+        "EXPIRE_IN":"1h",
+        "SECRET_KEY":"asdfghjklqwertyuiopzxcvbnm"
+    },
+    "SENDGRID": {
+        "API_KEY": "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",
+        "FROM_EMAIL": "syedasad@gmail.com"
+    }
+}
