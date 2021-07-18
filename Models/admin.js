@@ -1,8 +1,7 @@
-const { string } = require('joi');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userModel = new Schema({
+const adminModel = new Schema({
     firstName: {
         type: String,
         trim: true
@@ -10,10 +9,6 @@ const userModel = new Schema({
     lastName: {
         type: String,
         trim: true,
-        default: null
-    },
-    address: {
-        type: String,
         default: null
     },
     email: {
@@ -29,21 +24,18 @@ const userModel = new Schema({
     countryCode: {
         type: String
     },
-    isDeleted: {
-        type: Boolean,
-        default: false
-    },
-    postalCode: {
-        type: Number
-    },
     password: {
         type: String,
         select: true
+    },
+    isDeleted: {
+        type: Boolean,
+        default: false
     }
 },
     {
         timestamps: true,
-        versionKey: false,
+        versionKey: false
     })
 
-module.exports = mongoose.model('user', userModel);
+module.exports = mongoose.model('admin', adminModel);
