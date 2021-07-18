@@ -16,7 +16,7 @@ connection.connect();//connecting MongoDB
 // For any errors in catch block of controllers
 app.use((error, req, res, _) => {
   console.log("ERROR : ------------------>", error);
-  return res.status(error.statedus ? error.status : 400).json({
+  return res.status(error.status ? error.status : 400).json({
     error: true,
     message: error.message ? error.message : error,
     data: {},
